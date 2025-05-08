@@ -1,0 +1,73 @@
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 20px;
+    background-color: #60c04d;
+    text-align: center;
+  }
+  
+  .table-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    flex-direction: column;
+  }
+  
+  table {
+    border-spacing: 20px; /* Espaço entre as células */
+  }
+
+  td {
+    
+    background-color: #42e710;
+    border: 1px solid #ccc;
+    padding: 20px;
+    min-width: 150px;
+    min-height: 50px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 40px;
+    vertical-align: middle;
+    font-size: 18px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.2s ease;
+  }
+  
+  td:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Modal */
+  .modal {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  .modal-content img {
+    max-width: 100%;
+    border-radius: 8px;
+  }
+  
+  .close {
+    float: right;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .thumbs button {
+    font-size: 24px;
+    margin: 10px;
+    cursor: pointer;
+  }
+  
