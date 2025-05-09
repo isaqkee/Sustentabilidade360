@@ -1,73 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+
 body {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    padding: 20px;
-    background-color: #60c04d;
-    text-align: center;
-  }
+  font-family: "Fredoka", sans-serif;
+  padding: 20px;
+  background-image: url(/images/fundoVerde2.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  text-align: center;
+  margin: 0;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.table-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  flex-direction: column;
+  padding: 0 10px;
+}
+
+table {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  border-spacing: 20px;
+}
+
+td {
+  background-color: #57c734;
+  border: 1px solid #ccc;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 40px;
+  font-size: 18px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease;
+  word-wrap: break-word;
+}
+
+td:hover {
   
-  .table-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-    flex-direction: column;
-  }
-  
-  table {
-    border-spacing: 20px; /* Espaço entre as células */
+  background-color: #3b991e;
+  transform: scale(1.05);
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+.modal-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.close {
+  float: right;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.thumbs button {
+  font-size: 24px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.thumbs button.selected {
+  background-color: #dfffdc;
+  border: 2px solid #3c8c35;
+  border-radius: 10px;
+  transform: scale(1.1);
+}
+
+/* COR PARA O DESLIKE */
+.thumbs button.selected-dislike {
+  background-color: #ff4d4d; /* Cor vermelha para deslike */
+  border: 2px solid #b32d2d; /* Borda vermelha mais escura */
+  border-radius: 10px;
+  transform: scale(1.1);
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.5rem;
   }
 
   td {
-    
-    background-color: #42e710;
-    border: 1px solid #ccc;
-    padding: 20px;
-    min-width: 150px;
-    min-height: 50px;
-    text-align: center;
-    cursor: pointer;
-    border-radius: 40px;
-    vertical-align: middle;
-    font-size: 18px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    transition: transform 0.2s ease;
+    font-size: 16px;
+    padding: 15px;
   }
-  
-  td:hover {
-    transform: scale(1.05);
+
+  table {
+    border-spacing: 10px;
   }
-  
-  /* Modal */
-  .modal {
-    display: none;
-    position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background-color: rgba(0, 0, 0, 0.6);
-    justify-content: center;
-    align-items: center;
+}
+
+@media (max-width: 480px) {
+  td {
+    font-size: 14px;
+    padding: 12px;
   }
-  
+
   .modal-content {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 400px;
-    text-align: center;
+    padding: 15px;
   }
-  
-  .modal-content img {
-    max-width: 100%;
-    border-radius: 8px;
-  }
-  
-  .close {
-    float: right;
-    font-size: 20px;
-    cursor: pointer;
-  }
-  
+
   .thumbs button {
-    font-size: 24px;
-    margin: 10px;
-    cursor: pointer;
+    font-size: 20px;
   }
-  
+}

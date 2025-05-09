@@ -12,6 +12,14 @@ function abrirModal(titulo, imagem, descricao, estrela, horario) {
   }
   
   function votar(tipo) {
-    alert(`Você votou: ${tipo === 'up' ? 'Gostei' : 'Não gostei'}`);
+    const botoes = document.querySelectorAll('.thumbs button');
+    botoes.forEach(btn => btn.classList.remove('selected', 'selected-dislike'));
+  
+    if (tipo === 'up') {
+      botoes[0].classList.add('selected');
+    } else {
+      botoes[1].classList.add('selected-dislike'); // Aplicando o estilo de deslike
+    }
+
   }
   
