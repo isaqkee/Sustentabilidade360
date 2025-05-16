@@ -8,7 +8,7 @@ body {
   background-size: 600% 600%;
   animation: gradientAnimation 6s ease infinite;
   text-align: center;
-  margin: 0;
+  margin: 0;  
 }
 
 @keyframes gradientAnimation {
@@ -139,7 +139,7 @@ td:hover {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 400px) {
   td {
     font-size: 14px;
     padding: 12px;
