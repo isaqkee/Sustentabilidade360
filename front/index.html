@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CircuitoVerde</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <img class="imgLogo" src="images/CircuitoVerdeLog2.png" alt="">
+
+  <div class="table-container">
+    <table>
+      <thead>
+      </thead>
+      <tbody id="pontos-coleta">
+      </tbody>
+    </table>
+  </div>
+
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <span class="close" onclick="fecharModal()">&times;</span>
+      <a id="modal-nome"></a>
+      <p id="modal-endereco"></p>
+      <p id="modal-bairro"></p>
+      <p id="modal-funcionamento"></p>
+      <div class="thumbs">
+        <button onclick="votar('up')">👍</button>
+        <button onclick="votar('down')">👎</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
