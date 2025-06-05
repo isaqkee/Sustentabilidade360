@@ -15,7 +15,7 @@ mydb = mysql.connector.connect(
 )
 
 mycursor = mydb.cursor()
-mycursor.execute("SELECT * FROM pontos ORDER BY name")
+mycursor.execute("SELECT * FROM pontos ORDER BY nome")
 myresult = mycursor.fetchall()
 
 colunas = mycursor.column_names

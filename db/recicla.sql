@@ -40,7 +40,7 @@ CREATE TABLE `pontos` (
   `funcionamento_dias` varchar(50) DEFAULT NULL,
   `funcionamento_hora_inicio` time DEFAULT NULL,
   `funcionamento_hora_fim` time DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Despejando dados para a tabela `pontos`
@@ -111,7 +111,7 @@ INSERT INTO `pontos` (`id`, `nome`, `atualizado`, `funciona`, `site`, `endereco`
 CREATE TABLE `pontos_tags` (
   `id_ponto` int(11) NOT NULL,
   `id_tag` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Despejando dados para a tabela `pontos_tags`
@@ -132,7 +132,7 @@ INSERT INTO `pontos_tags` (`id_ponto`, `id_tag`) VALUES
 CREATE TABLE `tags` (
   `id` int(11) NOT NULL,
   `nome` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Despejando dados para a tabela `tags`
