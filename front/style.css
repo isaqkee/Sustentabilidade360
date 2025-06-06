@@ -4,25 +4,30 @@ body {
     font-family: "Fredoka", sans-serif;
     padding: 20px;
     min-height: 100vh; /* garante que cubra toda a tela */
-    background: linear-gradient(#24bb51, #EAECF0);
+    background-image: url(images/FundoAAA.png);
     background-repeat: no-repeat;
     background-attachment: fixed; /* importante: fixa o fundo */
     background-size: cover; /* cobre todo o espaço */
     text-align: center;
     margin: 0;
+    position: relative;
 }
 
 .header{
   display: flex;
   text-align: center;
   align-items: center;
-  margin-right: 450px;
+  justify-content: center;
+  margin-right: 100px;
+  right: 10px;
 }
 
 .navbar a{
   text-decoration: none;
   color: black;
-  font-size: 18px;
+  font-size: 16px;
+  display: flex;
+  transition: 0.5s;
 }
 
 .navbar {
@@ -30,13 +35,39 @@ body {
   display: flex;
   gap: 25px;
   align-items: center;
-  margin-right: 12px;
-  margin-left: 255px;
+  /* margin-right: 12px;
+  margin-left: 255px; */
   transition: transform 0.3s ease;
 }
 
 .navbar :hover{
   transform: scale(1.1);
+}
+
+.imgTeste{
+  width: 150px;
+  background-color: #3c8c35;
+  height: 50px;
+  border-radius: 50%;
+  height: 150px;
+  z-index: -1;
+  left: 75px;
+  top: 60px;
+  position: absolute;
+  filter: blur(5px);
+}
+
+.imgTeste2{
+  width: 150px;
+  background-color: #24bb51;
+  height: 50px;
+  border-radius: 50%;
+  height: 150px;
+  z-index: -1;
+  top: 70px;
+  left: 85px;
+  position: absolute;
+  filter: blur(2px);
 }
 
 .contato{
@@ -47,10 +78,13 @@ body {
   height: 40px;
   padding: 5px;
   text-align: center;
+  background-color: #24bb51;
+  transition: 0.5s;
 }
 
 .contato:hover{
   transform: scale(1.1);
+  background-color: #3b991e;
 }
 
 .contato a{
@@ -250,7 +284,16 @@ td:hover {
   z-index: 1000;
 }
 
-
+.footer {
+  background-color: #f1f1f1;
+  padding: 20px 10px;
+  text-align: center;
+  font-size: 14px;
+  color: #444;
+  width: 100%;  
+  position: absolute;
+  left: 0px;
+}
 
 /* RESPONSIVIDADE */
 @media (max-width: 768px) {

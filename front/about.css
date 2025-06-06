@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+
+body {
+    font-family: "Fredoka", sans-serif;
+    padding: 20px;
+    min-height: 100vh;
+    /* garante que cubra toda a tela */
+    background-image: url(images/FundoAAA.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* importante: fixa o fundo */
+    background-size: cover;
+    /* cobre todo o espaço */
+    text-align: center;
+    margin: 0;
+    position: relative;
+}
+
+.header {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-right: 100px;
+    right: 10px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    display: flex;
+    transition: 0.5s;
+}
+
+.navbar {
+    list-style-type: none;
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    /* margin-right: 12px;
+  margin-left: 255px; */
+    transition: transform 0.3s ease;
+}
+
+.navbar :hover {
+    transform: scale(1.1);
+}
+
+.imgTeste {
+    width: 150px;
+    background-color: #3c8c35;
+    height: 50px;
+    border-radius: 50%;
+    height: 150px;
+    z-index: -1;
+    left: 75px;
+    top: 60px;
+    position: absolute;
+    filter: blur(5px);
+}
+
+.imgTeste2 {
+    width: 150px;
+    background-color: #24bb51;
+    height: 50px;
+    border-radius: 50%;
+    height: 150px;
+    z-index: -1;
+    top: 70px;
+    left: 85px;
+    position: absolute;
+    filter: blur(2px);
+}
+
+.contato {
+    display: flex;
+    margin-top: 29px;
+    align-items: center;
+    border-radius: 15px;
+    height: 40px;
+    padding: 5px;
+    text-align: center;
+    background-color: #24bb51;
+    transition: 0.5s;
+}
+
+.contato:hover {
+    transform: scale(1.1);
+    background-color: #3b991e;
+}
+
+.contato a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+
+.imgLogo {
+    width: 300px;
+    display: block;
+    margin: 0 auto;
+}
+
+.about {
+    padding: 80px 70px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.about-content {
+    max-width: 1200px;
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.about-text {
+    flex: 1;
+    min-width: 300px;
+    text-align: left;
+}
+
+.about-text h3 {
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.about-text h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+.about-text h1 span {
+    color: #24bb51;
+}
+
+.about-text p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.about-btn {
+    text-decoration: none;
+    background-color: #24bb51;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.about-btn:hover {
+    background-color: #3b991e;
+}
+
+.about-img-wrapper {
+    flex: 1;
+    min-width: 300px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.about-img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 20px;
+    z-index: 2;
+    position: relative;
+}
+
+.about2-img {
+    width: 400px;
+    max-width: 400px;
+    border-radius: 20px;
+    z-index: 2;
+    left: 5px;
+    position: absolute;
+    opacity: 50%;
+    filter: blur(5px);
+    top: 20px;
+}
+
+
+/* .circle-bg {
+    width: 220px;
+    height: 220px;
+    background-color: #3c8c35;
+    border-radius: 50%;
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    z-index: 1;
+    opacity: 0.6;
+    filter: blur(5px);
+  } */
+
+  .footer {
+    background-color: #f1f1f1;
+    padding: 20px 10px;
+    text-align: center;
+    font-size: 14px;
+    color: #444;
+    width: 100%;  
+    position: absolute;
+    left: 0px;
+  }
+  
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px 0 0 0;
+    margin: 0;
+  }
+  
+  .footer-links li a {
+    text-decoration: none;
+    color: #3c8c35;
+    transition: 0.3s;
+  }
+  
+  .footer-links li a:hover {
+    text-decoration: underline;
+  }
+  

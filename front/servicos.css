@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+
+body {
+    font-family: "Fredoka", sans-serif;
+    padding: 20px;
+    min-height: 100vh; /* garante que cubra toda a tela */
+    background-image: url(images/FundoAAA.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* importante: fixa o fundo */
+    background-size: cover; /* cobre todo o espaço */
+    text-align: center;
+    margin: 0;
+    position: relative;
+}
+
+.header{
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin-right: 100px;
+  right: 10px;
+}
+
+.navbar a{
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  display: flex;
+  transition: 0.5s;
+}
+
+.navbar {
+  list-style-type: none;
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  /* margin-right: 12px;
+  margin-left: 255px; */
+  transition: transform 0.3s ease;
+}
+
+.navbar :hover{
+  transform: scale(1.1);
+}
+
+.imgTeste{
+  width: 150px;
+  background-color: #3c8c35;
+  height: 50px;
+  border-radius: 50%;
+  height: 150px;
+  z-index: -1;
+  left: 75px;
+  top: 60px;
+  position: absolute;
+  filter: blur(5px);
+}
+
+.imgTeste2{
+  width: 150px;
+  background-color: #24bb51;
+  height: 50px;
+  border-radius: 50%;
+  height: 150px;
+  z-index: -1;
+  top: 70px;
+  left: 85px;
+  position: absolute;
+  filter: blur(2px);
+}
+
+.contato{
+  display: flex;
+  margin-top: 29px;
+  align-items: center;
+  border-radius: 15px;
+  height: 40px;
+  padding: 5px;
+  text-align: center;
+  background-color: #24bb51;
+  transition: 0.5s;
+}
+
+.contato:hover{
+  transform: scale(1.1);
+  background-color: #3b991e;
+}
+
+.contato a{
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+}
+
+.imgLogo {
+  width: 300px;
+  display: block;
+  margin: 0 auto;
+}
+
+.residuos {
+    padding: 60px 20px;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    left: 0px;
+  }
+  
+  .residuos h2 {
+    font-size: 32px;
+    color: #3c8c35;
+    margin-bottom: 10px;
+  }
+  
+  .residuos-sub {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 40px;
+  }
+  
+  .residuos-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .residuo-card {
+    background: white;
+    border-radius: 15px;
+
+    width: 260px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+  }
+  
+  .residuo-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .residuo-card img{
+    margin-top: 50px;
+  }
+
+  .pilhas{
+    width: 160px;
+  }
+
+  .eletronico{
+    width: 180px;
+  }
+
+  .lampada{
+    width: 80px;
+  }
+
+  .cabo{
+    width: 120px;
+  }
+  
+  .residuo-card h3 {
+    color: #24bb51;
+    font-size: 20px;
+    margin: 0;
+  }
+  
+  .residuo-card p {
+    font-size: 15px;
+    color: #444;
+  }
+      
+  .footer {
+    background-color: #f1f1f1;
+    padding: 20px 10px;
+    text-align: center;
+    font-size: 14px;
+    color: #444;
+    width: 100%;  
+    position: absolute;
+    left: 0px;
+    bottom: -250px;
+  }
