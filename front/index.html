@@ -9,8 +9,17 @@
 </head>
 
 <body>
-
-  <img class="imgLogo" src="images/CircuitoVerdeLog2.png" alt="">
+  <div class="header">
+    <ul class="navbar">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#sobre">Sobre Nós</a></li>
+      <li><a href="#servicos">Serviço</a></li>
+  </ul>
+    <img class="imgLogo" src="images/CircuitoVerdeLog2.png" alt="">
+    <div class="contato">
+      <a href="#contato">Contate-nos</a>
+  </div>
+  </div>
 
   <div class="table-container">
     <table>
@@ -20,6 +29,24 @@
       </tbody>
     </table>
   </div>
+
+  <div class="chatbot">
+    <div class="chatbot-header">
+      Ajuda Rápida
+      <span class="chatbot-close" onclick="fecharChat()">×</span>
+    </div>
+    <div class="chatbot-body" id="chatbot-body">
+      <div class="bot-message">Olá! Como posso ajudar?</div>
+    </div>
+    <div class="chatbot-questions">
+      <button onclick="responder('horarios')">Quais são os horários de funcionamento?</button>
+      <button onclick="responder('tipos')">Que tipos de resíduos posso levar?</button>
+      <button onclick="responder('local')">Aonde ficam os pontos de coleta?</button>
+    </div>
+  </div>
+  
+  <div class="chatbot-minimized" onclick="abrirChat()">💬</div>
+  
 
   <div class="modal" id="modal">
     <div class="modal-content">

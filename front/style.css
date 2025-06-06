@@ -1,26 +1,62 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
 
 body {
-  font-family: "Fredoka", sans-serif;
-  padding: 20px;
-  height: 100vh;
-  background: linear-gradient(0deg, rgb(19, 209, 19), #0a0, rgb(7, 177, 7));
-  background-size: 600% 600%;
-  animation: gradientAnimation 6s ease infinite;
-  text-align: center;
-  margin: 0;  
+    font-family: "Fredoka", sans-serif;
+    padding: 20px;
+    min-height: 100vh; /* garante que cubra toda a tela */
+    background: linear-gradient(#24bb51, #EAECF0);
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* importante: fixa o fundo */
+    background-size: cover; /* cobre todo o espaço */
+    text-align: center;
+    margin: 0;
 }
 
-@keyframes gradientAnimation {
-  0% {
-    background-position: 50% 100%;
-  }
-  50% {
-    background-position: 50% 0%;
-  }
-  100% {
-    background-position: 50% 100%;
-  }
+.header{
+  display: flex;
+  text-align: center;
+  align-items: center;
+  margin-right: 450px;
+}
+
+.navbar a{
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+}
+
+.navbar {
+  list-style-type: none;
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  margin-right: 12px;
+  margin-left: 255px;
+  transition: transform 0.3s ease;
+}
+
+.navbar :hover{
+  transform: scale(1.1);
+}
+
+.contato{
+  display: flex;
+  margin-top: 29px;
+  align-items: center;
+  border-radius: 15px;
+  height: 40px;
+  padding: 5px;
+  text-align: center;
+}
+
+.contato:hover{
+  transform: scale(1.1);
+}
+
+.contato a{
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
 }
 
 .imgLogo {
@@ -81,6 +117,10 @@ td:hover {
   padding: 10px;
 }
 
+#modal-nome{
+  color: rgb(0, 0, 0, 0.6);
+}
+
 .modal-content {
   background: white;
   padding: 20px;
@@ -122,6 +162,95 @@ td:hover {
   border-radius: 10px;
   transform: scale(1.1);
 }
+
+.chatbot {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 250px;
+  background: #f0f0f0;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+
+  z-index: 999;
+}
+
+.chatbot-header {
+  background: #57c734;
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.chatbot-close {
+  float: right;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.chatbot-close:hover {
+  color: red;
+}
+
+.chatbot-body {
+  max-height: 150px;
+  overflow-y: auto;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.chatbot-questions {
+  border-top: 1px solid #ccc;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.chatbot-questions button {
+  background: #57c734;
+  color: white;
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: background 0.3s ease;
+}
+
+.chatbot-questions button:hover {
+  background: #45a049;
+}
+
+.bot-message {
+  background: #e0e0e0;
+  padding: 5px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+.chatbot-minimized {
+  display: none; /* Escondido inicialmente */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background: #57c734;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 24px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+
+
 
 /* RESPONSIVIDADE */
 @media (max-width: 768px) {

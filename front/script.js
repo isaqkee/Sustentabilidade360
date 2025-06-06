@@ -6,6 +6,43 @@ function formataHora(horarioCompleto) {
   return minutos === 0 ? `${horas}` : `${horas}:${minutos.toString().padStart(2, '0')}`;
 }
 
+
+function fecharChat() {
+  const chatbot = document.querySelector('.chatbot');
+  const minimized = document.querySelector('.chatbot-minimized');
+
+  chatbot.style.display = 'none';
+  minimized.style.display = 'flex';
+}
+
+function abrirChat() {
+  const chatbot = document.querySelector('.chatbot');
+  const minimized = document.querySelector('.chatbot-minimized');
+
+  chatbot.style.display = 'block';
+  minimized.style.display = 'none';
+}
+
+function responder(pergunta) {
+  let resposta = '';
+
+  if (pergunta === 'horarios') {
+    resposta = 'Varia em cada ponto de coleta, veja ao clicar.';
+  } else if (pergunta === 'tipos') {
+    resposta = 'Você pode levar pilhas, lixos eletrônicos, baterias e etc.';
+  } else if (pergunta === 'local') {
+    resposta = 'Todos ficam em São Paulo.';
+  }
+
+  const botBody = document.getElementById('chatbot-body');
+  const novaMsg = document.createElement('div');
+  novaMsg.className = 'bot-message';
+  novaMsg.textContent = resposta;
+  botBody.appendChild(novaMsg);
+
+  botBody.scrollTop = botBody.scrollHeight;
+}
+
 function abrirModal(nome, site, endereco, bairro, funcionamento_dias, funcionamento_hora_inicio, funcionamento_hora_fim) {
   document.getElementById('modal-nome').innerHTML = `<h2>${nome}</h2>`;
   
